@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #010b14;
+    color: #fff;
+}
+
+/* ── Header ── */
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    background-color: rgba(1, 12, 20, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s ease;
+}
+
+header.scrolled,
+header:hover {
+    background-color: rgba(1, 11, 20, 0.95);
+    backdrop-filter: blur(20px);
+}
+
+header .logo { width: 160px; }
+header .nav { position: relative; }
+
+header .nav .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .nav .nav-items a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .nav .nav-items a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0; height: 3px;
+    bottom: 0; left: 0;
+    transition: 0.3s ease;
+}
+
+header .nav .nav-items a.active { color: #008af5; }
+
+header .nav .nav-items a:hover:before {
+    width: 100%;
+    background: #008af5;
+    box-shadow: 0 0 10px #8cccfd, 0 0 40px #008af5, 0 0 10px #008af5;
+    transition: 0.4s;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+header .user-info span { margin-right: 10px; }
+header .user-info a { color: #008af5; text-decoration: none; font-weight: 300; transition: color 0.3s; }
+header .user-info a:hover { color: #ff3c3c; }
+
+.theme-toggle {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    transition: 0.3s;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: #008af5; color: #008af5; }
+
+/* ── Hero sekce ── */
+.dest-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 140px 200px 80px;
+    background: url(../img/galerie.jpg) center/cover no-repeat fixed;
+    overflow: hidden;
+}
+
+.dest-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(1,11,20,0.7) 0%, rgba(0,50,100,0.6) 60%, rgba(1,11,20,0.9) 100%);
+}
+
+.dest-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.dest-hero h1 {
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+.dest-hero h1 span {
+    color: #008af5;
+}
+
+.dest-hero p {
+    font-size: 1.15em;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 36px;
+    font-weight: 400;
+}
+
+/* ── Moderní search bar ── */
+.search-container {
+    position: relative;
+    width: 560px;
+    max-width: 100%;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #008af5;
+    font-size: 1.1em;
+}
+
+.search-input {
+    width: 100%;
+    padding: 16px 20px 16px 52px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-input::placeholder { color: rgba(255,255,255,0.5); }
+
+.search-input:focus {
+    background: rgba(255,255,255,0.18);
+    border-color: #008af5;
+    box-shadow: 0 0 20px rgba(0,138,245,0.3);
+}
+
+/* ── Destinations grid ── */
+.destinations-section {
+    padding: 60px 80px 80px;
+}
+
+.destinations-section > h2 {
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #008af5;
+    margin-bottom: 8px;
+}
+
+.destinations-section > p {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 28px;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 11px 28px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.22);
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.75);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.filter-btn:hover {
+    border-color: rgba(0,138,245,0.6);
+    color: #fff;
+    background: rgba(0,138,245,0.15);
+}
+
+.filter-btn.active {
+    background: #008af5;
+    border-color: #008af5;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0,138,245,0.4);
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.dest-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 420px;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dest-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,138,245,0.25);
+}
+
+.dest-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.dest-card:hover .dest-image {
+    transform: scale(1.06);
+}
+
+.dest-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,10,25,0.92) 0%,
+        rgba(0,20,50,0.5) 45%,
+        rgba(0,0,0,0.1) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+.dest-card:hover .dest-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(0,10,25,0.96) 0%,
+        rgba(0,30,70,0.7) 55%,
+        rgba(0,0,0,0.2) 100%
+    );
+}
+
+.dest-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 36px 32px;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+
+.dest-tag {
+    display: inline-block;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #008af5;
+    background: rgba(0,138,245,0.15);
+    border: 1px solid rgba(0,138,245,0.35);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.dest-content h2 {
+    font-size: 2.2em;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.dest-content p {
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.dest-card:hover .dest-content p {
+    max-height: 80px;
+    opacity: 1;
+}
+
+.dest-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    background: #008af5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,138,245,0.4);
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s, box-shadow 0.3s;
+}
+
+.dest-card:hover .dest-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dest-btn:hover {
+    background: #fff;
+    color: #008af5;
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+}
+
+.dest-btn i { font-size: 0.85em; transition: transform 0.3s; }
+.dest-btn:hover i { transform: translateX(4px); }
+
+/* ── Footer ── */
+footer { background: rgb(1, 11, 20); }
+.footerContainer { width: 100%; padding: 10px 30px; }
+.footerSocialMediaIcons { display: flex; justify-content: center; margin-bottom: -10px; }
+.footerSocialMediaIcons a { text-decoration: none; padding: 10px; margin: 10px; background-color: white; border-radius: 50%; transition: 0.5s ease; }
+.footerSocialMediaIcons a i { font-size: 1.2em; color: #110114; }
+.footerSocialMediaIcons a:hover { background-color: #010b14; }
+.footerSocialMediaIcons a:hover i { color: white; }
+.footerNavbar ul { display: flex; justify-content: center; list-style-type: none; flex-wrap: wrap; }
+.footerNavbar ul li a { color: white; margin: 20px; text-decoration: none; font-weight: 400; font-size: 1em; opacity: 0.7; transition: 0.5s ease; }
+.footerNavbar ul li a:hover { opacity: 1; }
+.footerBottom { padding: 12px; text-align: center; text-decoration: underline; text-decoration-color: white; }
+.footerBottom p { color: white; }
+
+/* ── Hamburger ── */
+@media (max-width: 1233px) {
+    header { padding: 12px 20px; }
+    header .nav { display: none; }
+    header .nav.active {
+        position: fixed; width: 100%; height: 100vh;
+        top: 0; left: 0; display: flex;
+        justify-content: center; align-items: center;
+        background: rgba(1,1,1,0.6);
+    }
+    header .nav.active .nav-items {
+        background: #fff; width: 600px; max-width: 90vw;
+        margin: 20px; padding: 40px; display: flex;
+        flex-direction: column; align-items: center;
+        border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        gap: 20px;
+    }
+    header .nav .nav-items a { color: #222; font-size: 1.2em; margin: 0; }
+    header .nav .nav-items a::before { background: #222; height: 5px; }
+    header .user-info { margin-top: 25px; padding-left: 0; flex-direction: column; align-items: center; color: #222; font-size: 1.1em; gap: 5px; }
+    header .user-info a { color: #ff3c3c; font-size: 0.95em; text-decoration: underline; }
+    header .nav.active .theme-toggle { border-color: rgba(0,0,0,0.3); color: #222; }
+    .menu-btn { background: url(../img/menu.png) no-repeat center; background-size: 30px; width: 40px; height: 40px; cursor: pointer; }
+    .menu-btn.active { z-index: 999; background: url(../img/close.png) no-repeat center; background-size: 25px; }
+    .dest-hero { padding: 140px 30px 60px; }
+    .dest-hero h1 { font-size: 2.5em; }
+    .destinations-section { padding: 40px 30px 60px; }
+    .search-container { width: 100%; }
+}
+
+@media (max-width: 900px) {
+    .destinations-grid { grid-template-columns: 1fr; }
+    .dest-card { height: 360px; }
+    .dest-content p { max-height: 80px; opacity: 1; }
+    .dest-btn { transform: translateY(0); opacity: 1; }
+    .dest-tag {
+        background: rgba(0,10,25,0.65);
+        border-color: rgba(0,138,245,0.8);
+        color: #5ab4ff;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+}
+
+@media (max-width: 600px) {
+    .dest-hero h1 { font-size: 2em; }
+    .dest-card { height: 300px; }
+}
+
+@media (max-width: 770px) {
+    .footerNavbar ul { flex-direction: column; }
+    .footerNavbar ul li { width: 100%; text-align: center; margin: 5px; }
+}

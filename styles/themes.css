@@ -1,0 +1,374 @@
+/* Light mode overrides – výchozí stav je tmavý/modrý */
+
+body.light-mode {
+    background: #f0f4f8 !important;
+    color: #0d1b2a !important;
+}
+
+/* Header */
+body.light-mode header {
+    background-color: rgba(255,255,255,0.95) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+body.light-mode header.scrolled,
+body.light-mode header:hover {
+    background-color: #fff !important;
+}
+
+body.light-mode header .nav .nav-items a {
+    color: #0d1b2a !important;
+}
+
+body.light-mode header .nav .nav-items a.active {
+    color: #006dcf !important;
+}
+
+body.light-mode header .user-info {
+    color: #0d1b2a !important;
+}
+
+body.light-mode header .user-info a {
+    color: #006dcf !important;
+}
+
+body.light-mode header .logo {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.light-mode .theme-toggle {
+    border-color: rgba(0,0,0,0.25) !important;
+    color: #0d1b2a !important;
+}
+
+/* Uvod – features & destinations-preview sekce */
+body.light-mode .features-section {
+    background: #e8f0f8 !important;
+}
+
+body.light-mode .destinations-preview {
+    background: #dce8f5 !important;
+}
+
+body.light-mode .features-header h2 {
+    color: #0d1b2a !important;
+}
+
+body.light-mode .feature-card {
+    background: #fff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode .feature-card h3 {
+    color: #0d1b2a !important;
+}
+
+body.light-mode .feature-card p {
+    color: rgba(0,0,0,0.55) !important;
+}
+
+body.light-mode .all-dest-btn {
+    border-color: rgba(0,0,0,0.2) !important;
+    color: #0d1b2a !important;
+}
+
+body.light-mode .all-dest-btn:hover {
+    background: #006dcf !important;
+    border-color: #006dcf !important;
+    color: #fff !important;
+}
+
+/* Hero sekce videa (uvod) – ponechat tmavé kvůli videu */
+body.light-mode .home::before {
+    background: rgba(0,30,60,0.45) !important;
+}
+
+/* Karty (cesty, dashboard) */
+body.light-mode .trip-card,
+body.light-mode .trip-form-section,
+body.light-mode .dashboard-section,
+body.light-mode .stat-card,
+body.light-mode .quick-actions {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .filter-bar a {
+    border-color: rgba(0,0,0,0.2) !important;
+    color: rgba(0,0,0,0.6) !important;
+}
+
+body.light-mode .filter-bar a.active {
+    background: #006dcf !important;
+    border-color: #006dcf !important;
+    color: #fff !important;
+}
+
+body.light-mode .no-trips { color: #555 !important; }
+body.light-mode .page-title { color: #0d1b2a !important; }
+
+/* Auth stránka */
+body.light-mode .auth-main {
+    background: url(../img/reglog_bg.jpg) center/cover no-repeat fixed !important;
+}
+
+body.light-mode .auth-container {
+    background: rgba(255,255,255,0.92) !important;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.12) !important;
+}
+
+body.light-mode .auth-container h2 { color: #0d1b2a !important; }
+
+body.light-mode .auth-container input {
+    background: rgba(0,0,0,0.05) !important;
+    border-color: rgba(0,0,0,0.15) !important;
+    color: #0d1b2a !important;
+}
+
+body.light-mode .auth-container input::placeholder {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .toggle-link {
+    color: rgba(0,0,0,0.6) !important;
+}
+
+/* Destinace hero – záměrně zůstává tmavé (foto pozadí, bílý text dobře čitelný) */
+body.light-mode .search-input {
+    background: rgba(255,255,255,0.18) !important;
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.35) !important;
+}
+body.light-mode .search-input::placeholder { color: rgba(255,255,255,0.6) !important; }
+body.light-mode .search-input:focus {
+    background: rgba(255,255,255,0.25) !important;
+    border-color: #008af5 !important;
+}
+
+body.light-mode .destinations-section {
+    background: #f0f4f8 !important;
+}
+
+body.light-mode .filter-btn {
+    border-color: rgba(0,0,0,0.15) !important;
+    background: rgba(0,0,0,0.04) !important;
+    color: rgba(0,0,0,0.55) !important;
+}
+body.light-mode .filter-btn:hover {
+    border-color: rgba(0,106,207,0.4) !important;
+    color: #006dcf !important;
+    background: rgba(0,106,207,0.07) !important;
+}
+body.light-mode .filter-btn.active {
+    background: #006dcf !important;
+    border-color: #006dcf !important;
+    color: #fff !important;
+}
+body.light-mode .destinations-section > p { color: #0d1b2a !important; }
+
+/* Recenze na stránkách zemí */
+body.light-mode .reviews {
+    background: #f0f4f8 !important;
+}
+
+/* Zeme stránky */
+body.light-mode .destination-detail .basic-info,
+body.light-mode .destination-detail .description,
+body.light-mode .destination-detail .highlights,
+body.light-mode .destination-detail .activities {
+    background: #fff !important;
+}
+
+/* Cesty & Dashboard – glassmorphism cards */
+body.light-mode .trip-card,
+body.light-mode .trip-form-section,
+body.light-mode .review-item,
+body.light-mode .review-form {
+    background: #fff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .trip-card-header h3 { color: #0d1b2a !important; }
+body.light-mode .trip-card-body p { color: rgba(0,0,0,0.6) !important; }
+body.light-mode .trip-card-body p i { color: #006dcf !important; }
+body.light-mode .trip-notes { color: rgba(0,0,0,0.4) !important; }
+body.light-mode .trip-card-actions { border-top-color: rgba(0,0,0,0.08) !important; }
+body.light-mode .trip-form-section h2 { color: #006dcf !important; }
+
+body.light-mode .form-group label { color: rgba(0,0,0,0.55) !important; }
+body.light-mode .form-group input,
+body.light-mode .form-group select,
+body.light-mode .form-group textarea {
+    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.15) !important;
+    color: #0d1b2a !important;
+}
+body.light-mode .form-group input::placeholder,
+body.light-mode .form-group textarea::placeholder { color: rgba(0,0,0,0.35) !important; }
+body.light-mode .form-group select option { background: #fff !important; color: #0d1b2a !important; }
+
+body.light-mode .cesty-hero,
+body.light-mode .dashboard-hero { background: linear-gradient(to bottom, rgba(200,220,245,0.6), transparent) !important; }
+
+/* Dashboard panels */
+body.light-mode .dashboard-section,
+body.light-mode .stat-card,
+body.light-mode .quick-actions {
+    background: #fff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+}
+body.light-mode .section-header { border-bottom-color: rgba(0,0,0,0.08) !important; }
+body.light-mode .section-header h2 { color: #0d1b2a !important; }
+body.light-mode .stat-card .stat-label { color: rgba(0,0,0,0.5) !important; }
+body.light-mode .stat-card .stat-number { color: #0d1b2a !important; }
+body.light-mode .recent-trip-item { background: rgba(0,0,0,0.03) !important; border-left-color: rgba(0,0,0,0.15) !important; }
+body.light-mode .recent-trip-item strong { color: #0d1b2a !important; }
+body.light-mode .recent-trip-item span { color: rgba(0,0,0,0.5) !important; }
+body.light-mode .quick-actions h2 { color: #0d1b2a !important; }
+body.light-mode .action-btn { background: rgba(0,106,207,0.08) !important; border-color: rgba(0,106,207,0.25) !important; color: #006dcf !important; }
+
+/* Zeme pages */
+body.light-mode .country-name { color: #fff !important; }
+body.light-mode .basic-info ul li,
+body.light-mode .highlights ul li,
+body.light-mode .activities ul li { color: rgba(0,0,0,0.65) !important; border-bottom-color: rgba(0,0,0,0.07) !important; }
+body.light-mode .basic-info ul li strong { color: rgba(0,0,0,0.45) !important; }
+body.light-mode .description p { color: rgba(0,0,0,0.65) !important; }
+body.light-mode .back-button { border-color: rgba(0,0,0,0.2) !important; color: #0d1b2a !important; }
+body.light-mode .reviews-header h2 { color: #0d1b2a !important; }
+body.light-mode .reviews-header p { color: rgba(0,0,0,0.5) !important; }
+body.light-mode .review-item p { color: rgba(0,0,0,0.65) !important; }
+body.light-mode .review-item small { color: rgba(0,0,0,0.35) !important; }
+body.light-mode .review-form h3 { color: #0d1b2a !important; }
+body.light-mode .review-form label { color: rgba(0,0,0,0.55) !important; }
+body.light-mode .review-form select,
+body.light-mode .review-form textarea {
+    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.15) !important;
+    color: #0d1b2a !important;
+}
+body.light-mode .review-login-hint { color: rgba(0,0,0,0.45) !important; }
+
+/* Oblíbené – recommendations sekce */
+body.light-mode .recommendations {
+    background: #f0f4f8 !important;
+    border-top: 1px solid rgba(0,0,0,0.08) !important;
+}
+body.light-mode .recommendations h2 {
+    color: #0d1b2a !important;
+}
+body.light-mode .recommend-card {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Admin */
+body.light-mode .admin-dashboard {
+    background: #fff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+body.light-mode .admin-dashboard h1 { color: #0d1b2a !important; }
+body.light-mode .admin-dashboard p { color: rgba(0,0,0,0.5) !important; }
+
+body.light-mode .admin-links a {
+    background: rgba(0,106,207,0.08) !important;
+    border-color: rgba(0,106,207,0.3) !important;
+    color: #006dcf !important;
+}
+body.light-mode .admin-links a:hover {
+    background: #006dcf !important;
+    border-color: #006dcf !important;
+    color: #fff !important;
+}
+
+body.light-mode .reviews-container {
+    background: #fff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+body.light-mode .reviews-container h1 { color: #0d1b2a !important; }
+body.light-mode .reviews-container h2 {
+    color: #006dcf !important;
+    border-bottom-color: rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .review-table th,
+body.light-mode .reviews-container table th {
+    background: rgba(0,106,207,0.06) !important;
+    color: #006dcf !important;
+    border-bottom-color: rgba(0,0,0,0.08) !important;
+}
+body.light-mode .review-table td,
+body.light-mode .reviews-container table td {
+    color: rgba(0,0,0,0.7) !important;
+    border-bottom-color: rgba(0,0,0,0.05) !important;
+}
+body.light-mode .review-table tr:hover td,
+body.light-mode .reviews-container table tr:hover td {
+    background: rgba(0,0,0,0.02) !important;
+}
+
+body.light-mode .back-button {
+    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.15) !important;
+    color: rgba(0,0,0,0.65) !important;
+}
+body.light-mode .back-button:hover {
+    background: rgba(0,106,207,0.08) !important;
+    border-color: rgba(0,106,207,0.4) !important;
+    color: #006dcf !important;
+}
+
+body.light-mode .action-button {
+    background: rgba(0,106,207,0.08) !important;
+    border-color: rgba(0,106,207,0.3) !important;
+    color: #006dcf !important;
+}
+body.light-mode .action-button:hover {
+    background: #006dcf !important;
+    border-color: #006dcf !important;
+    color: #fff !important;
+}
+body.light-mode .action-button.delete {
+    background: rgba(200,40,40,0.07) !important;
+    border-color: rgba(200,40,40,0.25) !important;
+    color: #c82828 !important;
+}
+body.light-mode .action-button.delete:hover {
+    background: #c82828 !important;
+    border-color: #c82828 !important;
+    color: #fff !important;
+}
+
+body.light-mode .review-table button,
+body.light-mode .reviews-container td button {
+    background: rgba(200,40,40,0.07) !important;
+    border-color: rgba(200,40,40,0.25) !important;
+    color: #c82828 !important;
+}
+body.light-mode .review-table button:hover,
+body.light-mode .reviews-container td button:hover {
+    background: #c82828 !important;
+    border-color: #c82828 !important;
+    color: #fff !important;
+}
+
+body.light-mode .admin-form input[type="text"],
+body.light-mode .admin-form input[type="email"],
+body.light-mode .admin-form input[type="password"] {
+    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.15) !important;
+    color: #0d1b2a !important;
+}
+body.light-mode .admin-form input::placeholder { color: rgba(0,0,0,0.35) !important; }
+body.light-mode .admin-form input:focus {
+    border-color: #006dcf !important;
+    background: rgba(0,0,0,0.06) !important;
+    box-shadow: 0 0 0 3px rgba(0,106,207,0.12) !important;
+}
+body.light-mode .admin-form label { color: rgba(0,0,0,0.55) !important; }
+
+/* Hamburger menu v light mode */
+body.light-mode header .nav.active {
+    background: rgba(0,0,0,0.4) !important;
+}

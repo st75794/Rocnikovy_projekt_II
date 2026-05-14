@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #010b14;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* ── Header ── */
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    background-color: rgba(1, 12, 20, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s ease;
+}
+
+header.scrolled, header:hover {
+    background-color: rgba(1, 11, 20, 0.95);
+}
+
+header .logo { width: 160px; }
+header .nav { position: relative; }
+
+header .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .nav .nav-items a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .nav .nav-items a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0; height: 3px;
+    bottom: 0; left: 0;
+    transition: 0.3s ease;
+}
+
+header .nav .nav-items a.active { color: #008af5; }
+
+header .nav .nav-items a:hover:before {
+    width: 100%;
+    background: #008af5;
+    box-shadow: 0 0 10px #8cccfd, 0 0 40px #008af5, 0 0 10px #008af5;
+    transition: 0.4s;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+header .user-info span { margin-right: 10px; }
+header .user-info a { color: #008af5; text-decoration: none; font-weight: 300; transition: color 0.3s; }
+header .user-info a:hover { color: #ff3c3c; }
+
+.theme-toggle {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1em; transition: 0.3s; margin-left: 10px; flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: #008af5; color: #008af5; }
+
+/* ── Main ── */
+main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 40px 80px;
+}
+
+/* ── Admin dashboard (admin.php) ── */
+.admin-dashboard {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 52px 48px;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.admin-dashboard h1 {
+    font-size: 2em;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.admin-dashboard p {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.95em;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.admin-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.admin-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: rgba(0,138,245,0.1);
+    border: 1px solid rgba(0,138,245,0.3);
+    border-radius: 50px;
+    color: #5ab4ff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.88em;
+    transition: 0.3s;
+}
+
+.admin-links a:hover {
+    background: #008af5;
+    border-color: #008af5;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0,138,245,0.4);
+    transform: translateY(-2px);
+}
+
+/* ── Reviews / Users container ── */
+.reviews-container {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 40px 48px;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.reviews-container h1 {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.reviews-container h2 {
+    font-size: 0.75em;
+    font-weight: 700;
+    color: #008af5;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 32px 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ── Back button ── */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.78em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: 0.3s;
+    margin-bottom: 28px;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+.back-button:hover {
+    border-color: rgba(0,138,245,0.5);
+    color: #fff;
+    background: rgba(0,138,245,0.1);
+}
+
+/* ── Table ── */
+.review-table,
+.reviews-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.review-table th,
+.reviews-container table th {
+    background: rgba(0,138,245,0.08);
+    color: #008af5;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+}
+
+.review-table td,
+.reviews-container table td {
+    color: rgba(255,255,255,0.72);
+    font-size: 0.88em;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    vertical-align: middle;
+}
+
+.review-table tr:last-child td,
+.reviews-container table tr:last-child td { border-bottom: none; }
+
+.review-table tr:hover td,
+.reviews-container table tr:hover td {
+    background: rgba(255,255,255,0.03);
+}
+
+/* ── Action buttons ── */
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid rgba(0,138,245,0.4);
+    background: rgba(0,138,245,0.12);
+    color: #5ab4ff;
+    transition: 0.3s;
+    font-family: "Montserrat", sans-serif;
+    margin: 2px;
+}
+
+.action-button:hover {
+    background: #008af5;
+    border-color: #008af5;
+    color: #fff;
+}
+
+.action-button.delete {
+    background: rgba(255,60,60,0.1);
+    border-color: rgba(255,60,60,0.3);
+    color: #ff8a8a;
+}
+
+.action-button.delete:hover {
+    background: #ff3c3c;
+    border-color: #ff3c3c;
+    color: #fff;
+}
+
+/* Delete button inside form (manage_reviews) */
+.review-table button,
+.reviews-container td button {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: 1px solid rgba(255,60,60,0.3);
+    background: rgba(255,60,60,0.1);
+    color: #ff8a8a;
+    transition: 0.3s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.review-table button:hover,
+.reviews-container td button:hover {
+    background: #ff3c3c;
+    border-color: #ff3c3c;
+    color: #fff;
+}
+
+/* ── Admin form ── */
+.admin-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    align-items: center;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="email"],
+.admin-form input[type="password"] {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 0.9em;
+    font-family: "Montserrat", sans-serif;
+    width: 180px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.admin-form input::placeholder { color: rgba(255,255,255,0.35); }
+
+.admin-form input:focus {
+    outline: none;
+    border-color: #008af5;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 3px rgba(0,138,245,0.15);
+}
+
+.admin-form label {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin-form button {
+    background: #008af5;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 0.88em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 0 16px rgba(0,138,245,0.3);
+}
+
+.admin-form button:hover {
+    background: #fff;
+    color: #008af5;
+    box-shadow: 0 0 24px rgba(255,255,255,0.2);
+}
+
+/* ── Footer ── */
+footer { background: rgb(1, 11, 20); }
+.footerContainer { width: 100%; padding: 10px 30px; }
+.footerSocialMediaIcons { display: flex; justify-content: center; margin-bottom: -10px; }
+.footerSocialMediaIcons a { text-decoration: none; padding: 10px; margin: 10px; background-color: white; border-radius: 50%; transition: 0.5s ease; }
+.footerSocialMediaIcons a i { font-size: 1.2em; color: #110114; }
+.footerSocialMediaIcons a:hover { background-color: #010b14; }
+.footerSocialMediaIcons a:hover i { color: white; }
+.footerNavbar ul { display: flex; justify-content: center; list-style-type: none; flex-wrap: wrap; }
+.footerNavbar ul li a { color: white; margin: 20px; text-decoration: none; font-weight: 400; font-size: 1em; opacity: 0.7; transition: 0.5s ease; }
+.footerNavbar ul li a:hover { opacity: 1; }
+.footerBottom { padding: 12px; text-align: center; text-decoration: underline; text-decoration-color: white; }
+.footerBottom p { color: white; }
+
+/* ── Animations ── */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Hamburger ── */
+@media (max-width: 1233px) {
+    header { padding: 12px 20px; }
+    header .nav { display: none; }
+    header .nav.active {
+        position: fixed; width: 100%; height: 100vh;
+        top: 0; left: 0; display: flex;
+        justify-content: center; align-items: center;
+        background: rgba(1,1,1,0.6);
+    }
+    header .nav.active .nav-items {
+        background: #fff; width: 600px; max-width: 90vw;
+        margin: 20px; padding: 40px; display: flex;
+        flex-direction: column; align-items: center;
+        border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); gap: 20px;
+    }
+    header .nav .nav-items a { color: #222; font-size: 1.2em; margin: 0; }
+    header .nav .nav-items a::before { background: #222; height: 5px; }
+    header .user-info { margin-top: 25px; padding-left: 0; flex-direction: column; align-items: center; color: #222; font-size: 1.1em; gap: 5px; }
+    header .user-info a { color: #ff3c3c; font-size: 0.95em; text-decoration: underline; }
+    header .nav.active .theme-toggle { border-color: rgba(0,0,0,0.3); color: #222; }
+    .menu-btn { background: url(../img/menu.png) no-repeat center; background-size: 30px; width: 40px; height: 40px; cursor: pointer; }
+    .menu-btn.active { z-index: 999; background: url(../img/close.png) no-repeat center; background-size: 25px; }
+    main { padding: 40px 20px 60px; }
+    .reviews-container { padding: 28px 24px; }
+    .admin-dashboard { padding: 36px 28px; }
+}
+
+@media (max-width: 770px) {
+    .footerNavbar ul { flex-direction: column; }
+    .footerNavbar ul li { width: 100%; text-align: center; margin: 5px; }
+    .reviews-container { overflow-x: auto; }
+    .review-table, .reviews-container table { min-width: 600px; }
+    .admin-form { flex-direction: column; align-items: stretch; }
+    .admin-form input[type="text"],
+    .admin-form input[type="email"],
+    .admin-form input[type="password"] { width: 100%; }
+}
