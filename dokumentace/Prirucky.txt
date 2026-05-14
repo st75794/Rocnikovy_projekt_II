@@ -1,0 +1,260 @@
+============================================================
+  JOURNEYO – Uživatelská a administrátorská příručka
+============================================================
+
+Autor:    Jan Makovický
+
+============================================================
+  ČÁST 1 – UŽIVATELSKÁ PŘÍRUČKA
+============================================================
+
+Tato část je určena běžným uživatelům aplikace JOURNEYO.
+
+
+------------------------------------------------------------
+1. SPUŠTĚNÍ APLIKACE
+------------------------------------------------------------
+
+    1. Spusťte XAMPP Control Panel a zapněte moduly
+       Apache a MySQL (tlačítko "Start").
+    2. Otevřete webový prohlížeč a zadejte adresu:
+       http://localhost/journeyo/pages/uvod.php
+    3. Zobrazí se domovská stránka aplikace JOURNEYO.
+
+
+------------------------------------------------------------
+2. REGISTRACE A PŘIHLÁŠENÍ
+------------------------------------------------------------
+
+    2.1 Registrace nového účtu
+        a) V navigaci klikněte na "Přihlášení".
+        b) Na stránce zvolte záložku "Registrace".
+        c) Vyplňte:
+             – Uživatelské jméno (zobrazuje se na webu)
+             – E-mailová adresa
+             – Heslo
+        d) Klikněte na tlačítko "Registrovat se".
+        e) Po úspěšné registraci budete přihlášeni.
+
+    2.2 Přihlášení
+        a) V navigaci klikněte na "Přihlášení".
+        b) Zadejte své uživatelské jméno a heslo.
+        c) Klikněte na "Přihlásit se".
+        d) Po úspěšném přihlášení se v navigaci zobrazí
+           vaše uživatelské jméno a přibydou položky:
+           Oblíbené, Cesty, Dashboard.
+
+    2.3 Odhlášení
+        – V navigaci klikněte na "Odhlásit se" vedle
+          svého uživatelského jména.
+
+
+------------------------------------------------------------
+3. PROCHÁZENÍ DESTINACÍ
+------------------------------------------------------------
+
+    3.1 Přehled destinací
+        – V navigaci klikněte na "Destinace".
+        – Zobrazí se přehledná mřížka karet destinací.
+        – Každá karta obsahuje fotografii, název země
+          a kontinent.
+
+    3.2 Vyhledávání
+        – Do vyhledávacího pole zadejte název země –
+          seznam se filtruje okamžitě (průběžně při psaní).
+
+    3.3 Detail destinace
+        – Klikněte kamkoli na kartu destinace (nebo na
+          tlačítko "Prozkoumat").
+        – Zobrazí se detail se sekcemi:
+            * Základní informace (rozloha, obyvatelé …)
+            * Popis destinace
+            * Doporučená místa
+            * Co se zde dá dělat
+            * Recenze ostatních uživatelů
+        – Tlačítko "← Zpět" (vlevo nahoře nad názvem
+          země) nebo "Zpět na seznam destinací" (dole)
+          vás vrátí na přehled.
+
+
+------------------------------------------------------------
+4. OBLÍBENÉ DESTINACE
+------------------------------------------------------------
+
+    4.1 Přidání do oblíbených
+        – Na stránce detailu destinace klikněte na ikonu
+          hvězdičky (☆) vedle názvu země v horní části
+          stránky.
+        – Hvězdička se změní na ★ a zobrazí se zelené
+          oznámení "Přidáno do oblíbených".
+        – Přidávat do oblíbených mohou pouze přihlášení
+          uživatelé.
+
+    4.2 Odebrání z oblíbených
+        – Na stránce destinace klikněte znovu na hvězdičku
+          (★) nebo na stránce Oblíbené klikněte na
+          "Odebrat".
+        – Zobrazí se oznámení o odebrání.
+
+    4.3 Stránka Oblíbené
+        – V navigaci klikněte na "Oblíbené".
+        – Zobrazí se všechny vámi uložené destinace.
+        – Na konci stránky najdete sekci s doporučenými
+          destinacemi (náhodný výběr z ostatních).
+
+
+------------------------------------------------------------
+5. SPRÁVA CEST
+------------------------------------------------------------
+
+    5.1 Přidání nové cesty
+        a) V navigaci klikněte na "Cesty".
+        b) V pravé části stránky (nebo dole na mobilu)
+           vyplňte formulář "Přidat novou cestu":
+             – Název cesty (povinné)
+             – Destinace (povinné)
+             – Datum od / Datum do (volitelné)
+             – Stav: Plánovaná / Probíhající / Dokončená
+             – Poznámky (volitelné)
+        c) Klikněte na "Přidat cestu".
+        d) Cesta se zobrazí v levém seznamu cest.
+
+    5.2 Filtrování cest
+        – Nad seznamem cest jsou filtrovací tlačítka:
+          Vše / Plánované / Probíhající / Dokončené.
+        – Kliknutím zobrazíte pouze cesty zvoleného stavu.
+
+    5.3 Editace cesty
+        – Na kartě cesty klikněte na tlačítko "Upravit".
+        – Formulář se předvyplní stávajícími hodnotami.
+        – Proveďte změny a potvrďte tlačítkem "Uložit".
+
+    5.4 Smazání cesty
+        – Na kartě cesty klikněte na "Smazat".
+        – Cesta bude trvale odstraněna.
+
+
+------------------------------------------------------------
+6. PŘIDÁNÍ RECENZE
+------------------------------------------------------------
+
+    a) Přejděte na detail destinace (viz část 3.3).
+    b) Sjeďte dolů do sekce "Recenze".
+    c) Ve formuláři "Přidat recenzi":
+         – Zvolte hodnocení od 1 do 5 hvězdiček.
+         – Napište text recenze.
+    d) Klikněte na "Odeslat recenzi".
+    e) Recenze se ihned zobrazí v seznamu.
+
+    Pozn.: Recenze mohou přidávat pouze přihlášení
+    uživatelé.
+
+
+------------------------------------------------------------
+7. UŽIVATELSKÝ DASHBOARD
+------------------------------------------------------------
+
+    – V navigaci klikněte na "Dashboard".
+    – Dashboard zobrazuje:
+        * Celkový počet vašich cest
+        * Počet plánovaných cest
+        * Počet probíhajících cest
+        * Počet dokončených cest
+        * Počet oblíbených destinací
+        * Počet publikovaných recenzí
+        * Přehled posledních 5 cest s jejich stavem
+
+
+------------------------------------------------------------
+8. PŘEPÍNÁNÍ MOTIVU (DARK / LIGHT MODE)
+------------------------------------------------------------
+
+    – V pravém rohu navigace se nachází ikona ◑
+      (přepínač motivu).
+    – Kliknutím přepnete mezi tmavým a světlým motivem.
+    – Volba se uloží automaticky a bude zachována
+      i při příštím otevření stránky.
+
+
+============================================================
+  ČÁST 2 – ADMINISTRÁTORSKÁ PŘÍRUČKA
+============================================================
+
+Tato část je určena uživatelům s administrátorskými
+oprávněními.
+
+
+------------------------------------------------------------
+9. PŘÍSTUP DO ADMINISTRACE
+------------------------------------------------------------
+
+    – Administrátorský účet je vytvořen ručně v databázi
+      nebo povýšením existujícího uživatele (viz část 11).
+    – Po přihlášení administrátorského účtu se v navigaci
+      zobrazí položka "Admin".
+    – Kliknutím na "Admin" přejdete na admin dashboard.
+
+
+------------------------------------------------------------
+10. SPRÁVA RECENZÍ
+------------------------------------------------------------
+
+    10.1 Zobrazení recenzí
+         – Na admin dashboardu klikněte na
+           "Správa recenzí".
+         – Zobrazí se tabulka se všemi recenzemi
+           (uživatel, destinace, hodnocení, text, datum).
+
+    10.2 Smazání recenze
+         – Na konci řádku recenze klikněte na
+           tlačítko "Smazat".
+         – Recenze bude trvale odstraněna.
+           Tato akce je nevratná.
+
+    – Tlačítko "← Zpět" (vlevo nahoře nad nadpisem) nebo 
+           "Zpět na seznam destinací" (dole) vás vrátí na 
+           hlavní admin menu.
+
+
+------------------------------------------------------------
+11. SPRÁVA UŽIVATELŮ
+------------------------------------------------------------
+
+    11.1 Zobrazení uživatelů
+         – Na admin dashboardu klikněte na
+           "Správa uživatelů".
+         – Zobrazí se tabulka se všemi registrovanými
+           uživateli (jméno, e-mail, role).
+
+    11.2 Přidání nového uživatele
+         – Pod tabulkou vyplňte formulář:
+             * Uživatelské jméno
+             * E-mail
+             * Heslo
+         – Klikněte na "Přidat uživatele".
+         – Uživatel bude vytvořen s rolí "uživatel".
+
+    11.3 Smazání uživatele
+         – Na řádku uživatele klikněte na "Smazat".
+         – Účet uživatele bude trvale odstraněn.
+           Tato akce je nevratná.
+         – Pozor: Nelze smazat vlastní účet přihlášeného
+           administrátora.
+
+    11.4 Povýšení uživatele na administrátora
+         – Na řádku uživatele klikněte na "Povýšit".
+         – Uživatel získá administrátorská oprávnění
+           a bude mu v navigaci zobrazena položka "Admin".
+
+    11.5 Degradace administrátora na uživatele
+         – Na řádku administrátora klikněte na "Degradovat".
+         – Administrátorská oprávnění budou odebrána.
+
+    – Tlačítko "← Zpět" (vlevo nahoře nad nadpisem) nebo 
+           "Zpět na seznam destinací" (dole) vás vrátí na 
+           hlavní admin menu.
+
+
+============================================================
+  Konec dokumentu – Uživatelská a administrátorská příručka
+============================================================
